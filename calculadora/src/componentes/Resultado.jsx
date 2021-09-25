@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Resultado = ({resultado=0}) => {
+const Resultado = ({resultado,setResultado}) => {
     return (
         <>
             <Pantalla>{resultado}</Pantalla>
@@ -15,6 +15,8 @@ const Pantalla = styled.div`
     border-radius:5px;
     font-size:1.5em;
     text-align:right;
+    padding-top:25px;
     padding-right:5px;
+    margin-bottom:15px;
  `
 export default Resultado;
