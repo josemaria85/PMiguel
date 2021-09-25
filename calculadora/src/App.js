@@ -5,34 +5,47 @@ import Boton from './componentes/Boton';
 import Resultado from './componentes/Resultado';
 
 function App() {
-  const [resultado, setResultado] = useState(0);
+  const [resultado, setResultado] = useState('');
+  
+  const operacion=()=>{
+
+  }
+  const marcaNumero=(numero)=>{
+    setResultado(numero);
+  }
   return (
     <>
       <Contenedor >
-        <Resultado resultado={resultado} setResultado={setResultado}/>
+        <Resultado resultado={resultado} />
         <Botonera>
-          <Boton numero={7}></Boton>
-          <Boton numero={8}></Boton>
-          <Boton numero={9}></Boton>
-          <Boton numero={'*'}></Boton>
+          <Boton numero={"%"}  resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={"X^"}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={"Raiz"}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={'C'}   resultado={resultado} setResultado={setResultado}></Boton>
         </Botonera>
         <Botonera>
-          <Boton numero={4}></Boton>
-          <Boton numero={5}></Boton>
-          <Boton numero={6}></Boton>
-          <Boton numero={'-'}></Boton>
+          <Boton numero={7}  resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={8}  resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={9}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={'*'}   resultado={resultado} setResultado={setResultado}></Boton>
         </Botonera>
         <Botonera>
-          <Boton numero={1}></Boton>
-          <Boton numero={2}></Boton>
-          <Boton numero={3}></Boton>
-          <Boton numero={'+'}></Boton>
+          <Boton numero={4}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={5}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={6}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={'-'}   resultado={resultado} setResultado={setResultado}></Boton>
         </Botonera>
         <Botonera>
-          <Boton numero={'/'}></Boton>
-          <Boton numero={0}></Boton>
-          <Boton numero={'.'}></Boton>
-          <Boton numero={"="}></Boton>
+          <Boton numero={1}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={2}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={3}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={'+'}   resultado={resultado} setResultado={setResultado}></Boton>
+        </Botonera>
+        <Botonera>
+          <Boton numero={'/'}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={0}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton disabled="disabled" numero={''}   resultado={resultado} setResultado={setResultado}></Boton>
+          <Boton numero={"="}   resultado={resultado} setResultado={setResultado} ></Boton>
         </Botonera>
       </Contenedor>  </>
   );
@@ -47,5 +60,6 @@ const Contenedor = styled.div`
 `
 const Botonera=styled.div`
 display:flex;
+
 `
 export default App;
