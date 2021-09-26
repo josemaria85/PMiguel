@@ -5,14 +5,9 @@ import Boton from './componentes/Boton';
 import Resultado from './componentes/Resultado';
 
 function App() {
+  //use state del resultado
   const [resultado, setResultado] = useState('');
-  
-  const operacion=()=>{
 
-  }
-  const marcaNumero=(numero)=>{
-    setResultado(numero);
-  }
   return (
     <>
       <Contenedor >

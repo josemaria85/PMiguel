@@ -5,9 +5,8 @@ import estilos from "./boton.css";
 
 const Boton = ({ numero, resultado, setResultado, disabled }) => {
 
+  //Devuelve el resultado de operaciones pasandole un array con los numeros y operacion
   const resultados = (numeros) => {
-
-
     let num1 = parseInt(numeros[0]);
     let num2 = parseInt(numeros[2]);
     let operacion = numeros[1];
@@ -38,8 +37,12 @@ const Boton = ({ numero, resultado, setResultado, disabled }) => {
         break;
     }
   }
-  const devolver = (e) => {
 
+  //Devuelve el resultado de las operaciones
+  const devolver = (e) => {
+    //si se pulsa igual se hace el calculo 
+    //y si se preciona c se borra el contenido de la pantalla del resultado
+    //y si no se concatenan los numeros sin mas
     if (e.target.value == "=") {
       let numeros = resultado.split(/([+\-*/%]+|[X^]+|[Raiz]+)/g);
       resultados(numeros);
